@@ -77,6 +77,4 @@ The product detail page (`product-details.html`) is currently an empty placehold
 - Browser `localStorage`
 - Font Awesome 4.7.0 via CDN
 
-## License
 
-No license is currently specified. Add a `LICENSE` file if you intend to grant reuse rights.

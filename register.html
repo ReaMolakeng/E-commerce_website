@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account | Agrisudeco Poultry</title>
+    <link rel="icon" href="images/agrisudeco-logo.jpg" type="image/x-icon">   
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- NAVBAR -->
+<header class="navbar">
+
+    <div class="logo">
+        <img src="images/agrisudeco-logo.jpg" alt="Agrisudeco Poultry Logo">
+        <h2>Agrisudeco Poultry</h2>
+    </div>
+
+    <nav id="main-nav">
+        <a href="index.html">Home</a>
+        <a href="products.html">Shop</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#contact">Contact</a>
+
+        <!-- Logout ONLY inside hamburger -->
+        <div class="mobile-logout" id="mobile-logout"></div>
+    </nav>
+
+    <div class="nav-actions">
+
+        <!-- Cart stays outside hamburger -->
+        <a href="cart.html" class="cart-btn">
+            🛒 <span id="cart-count">0</span>
+        </a>
+
+        <!-- Profile/account stays outside hamburger -->
+        <div class="account-area" id="account-area"></div>
+
+    </div>
+
+    <button class="menu-toggle" id="menu-toggle">☰</button>
+
+</header>
+
+    <!-- REGISTER -->
+    <main class="auth-page">
+        <div class="auth-container">
+            <div class="auth-header">
+                <h1>Create Account</h1>
+                <p>
+                    Create your Agrisudeco Poultry account.
+                </p>
+            </div>
+
+            <form id="register-form">
+
+                <div class="form-group">
+                    <label for="register-name">
+                        Full Name
+                    </label>
+                    <input
+                        type="text"
+                        id="register-name"
+                        required>
+                </div>
+
+                <div class="form-group">
+                    <label for="register-email">
+                        Email Address
+                    </label>
+                    <input
+                        type="email"
+                        id="register-email"
+                        required>
+                </div>
+
+                <div class="form-group">
+                    <label for="register-phone">
+                        Phone Number
+                    </label>
+                    <input
+                        type="tel"
+                        id="register-phone"
+                        required>
+                </div>
+
+                <div class="form-group">
+
+                    <label for="register-password">
+                        Password
+                    </label>
+                    <input
+                        type="password"
+                        id="register-password"
+                        required>
+                </div>
+
+                <div class="form-group">
+                    <label for="confirm-password">
+                        Confirm Password
+                    </label>
+                    <input
+                        type="password"
+                        id="confirm-password"
+                        required>
+                </div>
+
+                <p id="register-message"
+                   class="auth-message">
+                </p>
+
+                <button
+                    type="submit"
+                    class="auth-btn">
+                    Create Account
+                </button>
+            </form>
+
+            <div class="auth-footer">
+                <p>
+                    Already have an account?
+                </p>
+                <a href="login.html">
+                    Login here
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div>
+                <h3>
+                    Agrisudeco Poultry
+                </h3>
+                <p>
+                    Quality poultry products for every household.
+                </p>
+            </div>
+
+            <div>
+                <h4>
+                    Quick Links
+                </h4>
+                <a href="index.html">
+                    Home
+                </a>
+                <a href="products.html">
+                    Shop
+                </a>
+                <a href="cart.html">
+                    Cart
+                </a>
+            </div>
+
+            <div>
+                <h4>
+                    Contact
+                </h4>
+                <p>
+                    WhatsApp: Contact Us
+                </p>
+                <p>
+                    Facebook: Agrisudeco Poultry
+                </p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>
+                © 2026 Agrisudeco Poultry (Pty) Ltd.
+                All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/auth.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customers | Agrisudeco Poultry</title>
+    <link rel="stylesheet" href="css/admin-style.css">
+</head>
+
+
+<body>
+    <!-- =========================
+         ADMIN SIDEBAR
+    ========================== -->
+    <aside
+        class="admin-sidebar"
+        id="admin-sidebar"
+    >
+
+        <div class="admin-sidebar-header">
+
+            <img
+                src="../images/agrisudeco-logo.jpg"
+                alt="Agrisudeco Poultry Logo"
+            >
+
+            <h2>Agrisudeco</h2>
+
+        </div>
+
+
+        <nav class="admin-nav">
+
+            <a
+                href="dashboard.html"
+                class="admin-nav-link"
+            >
+                <span>📊</span>
+                Dashboard
+            </a>
+
+
+            <a
+                href="products.html"
+                class="admin-nav-link"
+            >
+                <span>📦</span>
+                Products
+            </a>
+
+
+            <a
+                href="orders.html"
+                class="admin-nav-link"
+            >
+                <span>🛒</span>
+                Orders
+            </a>
+
+
+            <a
+                href="customers.html"
+                class="admin-nav-link active"
+            >
+                <span>👥</span>
+                Customers
+            </a>
+
+
+            <a
+                href="../index.html"
+                class="admin-nav-link"
+            >
+                <span>🏪</span>
+                View Store
+            </a>
+
+
+            <a
+                href="#"
+                class="admin-nav-link"
+                id="admin-logout"
+            >
+                <span>🚪</span>
+                Logout
+            </a>
+
+        </nav>
+
+    </aside>
+
+
+
+    <!-- =========================
+         MAIN CONTENT
+    ========================== -->
+
+    <main class="admin-main">
+
+
+        <!-- TOP BAR -->
+
+        <header class="admin-topbar">
+
+            <button
+                class="admin-menu-toggle"
+                id="admin-menu-toggle"
+            >
+                ☰
+            </button>
+
+
+            <div>
+
+                <h1>Customers</h1>
+
+                <p>
+                    Manage registered customers
+                </p>
+
+            </div>
+
+
+            <div class="admin-user">
+
+                <span>
+                    Administrator
+                </span>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- =========================
+             PAGE CONTENT
+        ========================== -->
+
+        <section class="admin-content">
+
+
+            <!-- PAGE HEADER -->
+
+            <div class="products-page-header">
+
+                <div>
+
+                    <h2>
+                        Customer Management
+                    </h2>
+
+                    <p>
+                        View registered customers and their account information.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =========================
+                 CUSTOMER TOOLS
+            ========================== -->
+
+            <div class="product-tools">
+
+
+                <!-- SEARCH CUSTOMERS -->
+
+                <input
+                    type="text"
+                    id="customer-search"
+                    class="product-search"
+                    placeholder="Search customers..."
+                >
+
+
+                <!-- CUSTOMER STATUS FILTER -->
+
+                <select
+                    id="customer-status-filter"
+                    class="product-filter"
+                >
+
+                    <option value="all">
+                        All Customers
+                    </option>
+
+                    <option value="Active">
+                        Active
+                    </option>
+
+                    <option value="Inactive">
+                        Inactive
+                    </option>
+
+                </select>
+
+            </div>
+
+
+
+            <!-- =========================
+                 CUSTOMERS TABLE
+            ========================== -->
+
+            <div class="products-table-container">
+
+                <table class="products-table">
+
+                    <thead>
+
+                        <tr>
+
+                            <th>
+                                Customer ID
+                            </th>
+
+                            <th>
+                                Customer
+                            </th>
+
+                            <th>
+                                Email
+                            </th>
+
+                            <th>
+                                Phone
+                            </th>
+
+                            <th>
+                                Orders
+                            </th>
+
+                            <th>
+                                Status
+                            </th>
+
+                            <th>
+                                Actions
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody id="customers-table-body">
+
+                        <!-- Customers will be added using JavaScript -->
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+<!-- =========================
+     CUSTOMER DETAILS MODAL
+========================== -->
+    <div class="customer-modal" id="customer-modal">
+
+        <div class="customer-modal-content">
+
+            <!-- MODAL HEADER -->
+
+            <div class="customer-modal-header">
+
+                <div>
+
+                    <h2>Customer Details</h2>
+
+                    <p id="modal-customer-id"></p>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    class="customer-modal-close"
+                    id="customer-modal-close"
+                >
+                    &times;
+                </button>
+
+            </div>
+
+
+            <!-- MODAL BODY -->
+
+            <div class="customer-modal-body">
+
+
+                <div class="customer-detail-row">
+
+                    <strong>Full Name:</strong>
+
+                    <span id="modal-customer-name"></span>
+
+                </div>
+
+
+                <div class="customer-detail-row">
+
+                    <strong>Email:</strong>
+
+                    <span id="modal-customer-email"></span>
+
+                </div>
+
+
+                <div class="customer-detail-row">
+
+                    <strong>Phone:</strong>
+
+                    <span id="modal-customer-phone"></span>
+
+                </div>
+
+
+                <div class="customer-detail-row">
+
+                    <strong>Total Orders:</strong>
+
+                    <span id="modal-customer-orders"></span>
+
+                </div>
+
+
+                <div class="customer-detail-row">
+
+                    <strong>Account Status:</strong>
+
+                    <span id="modal-customer-status"></span>
+
+                </div>
+
+
+            </div>
+
+
+            <!-- MODAL FOOTER -->
+
+            <div class="customer-modal-actions">
+
+                <button
+                    type="button"
+                    class="cancel-product-btn"
+                    id="close-customer-modal"
+                >
+                    Close
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- ADMIN JAVASCRIPT -->
+    <script src="js/admin.js"></script>
+
+</body>
+
+</html>

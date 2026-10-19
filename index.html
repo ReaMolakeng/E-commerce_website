@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="images/agrisudeco-logo.jpg" type="image/x-icon">
+    <script src="js/script.js" defer></script>
+    <title>Agrisudeco Poultry</title>
+</head>
+<body>
+
+    <!-- NAVIGATION BAR  -->
+<header class="navbar">
+
+    <div class="logo">
+        <img src="images/agrisudeco-logo.jpg" alt="Agrisudeco Poultry Logo">
+        <h2>Agrisudeco Poultry</h2>
+    </div>
+    <nav id="main-nav">
+        <a href="index.html">Home</a>
+        <a href="products.html">Shop</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#contact">Contact</a>
+        <a href="admin/login.html" class="admin-link">Admin</a>
+        <!-- Logout ONLY inside hamburger -->
+        <div class="mobile-logout" id="mobile-logout"></div>
+    </nav>
+    <div class="nav-actions">
+        <a href="cart.html" class="cart-btn">
+            🛒 <span id="cart-count">0</span>
+        </a>
+        <div class="account-area" id="account-area"></div>
+    </div>
+    <button class="menu-toggle" id="menu-toggle">☰</button>
+</header>
+
+    <!-- HERO SECTION -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <p class="hero-subtitle">
+                AGRISUDECO POULTRY
+            </p>
+
+            <h1>
+                Fresh Poultry.<br>
+                From The Farm To Your Table.
+            </h1>
+
+            <p class="hero-text">
+                Farm chickens, no hormones, no shortcuts, naturally raised - Pure goodness for every table.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="products.html" class="primary-btn">
+                    Shop Now
+                </a>
+
+                <a href="#about" class="secondary-btn">
+                    Learn More
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!--  CATEGORIES  -->
+
+    <section class="categories">
+
+        <div class="section-heading">
+
+            <p>SHOP BY CATEGORY</p>
+
+            <h2>What Are You Looking For?</h2>
+
+        </div>
+
+
+        <div class="category-container">
+
+            <div class="category-card">
+
+                <div class="category-icon">
+                    🍗
+                </div>
+
+                <h3>Fresh Chicken</h3>
+
+                <p>
+                    Quality poultry products for your everyday meals.
+                </p>
+
+                <a href="products.html">
+                    Shop Chicken →
+                </a>
+
+            </div>
+
+
+            <div class="category-card">
+
+                <div class="category-icon">
+                    🥚
+                </div>
+
+                <h3>Eggs</h3>
+
+                <p>
+                    Fresh eggs suitable for homes and businesses.
+                </p>
+
+                <a href="products.html">
+                    Shop Eggs →
+                </a>
+
+            </div>
+
+
+            <div class="category-card">
+
+                <div class="category-icon">
+                    📦
+                </div>
+
+                <h3>Bulk Orders</h3>
+
+                <p>
+                    Poultry orders for businesses and larger customers.
+                </p>
+
+                <a href="products.html">
+                    View Options →
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!--  FEATURED PRODUCTS  -->
+
+    <section class="featured">
+
+        <div class="section-heading">
+
+            <p>OUR PRODUCTS</p>
+
+            <h2>Featured Products</h2>
+
+        </div>
+
+
+        <div class="product-container">
+
+            <div class="product-card">
+
+                <div class="product-image">
+                    <img src="images/homepage-chicken.jpg" alt="Fresh Whole Chicken">
+                </div>
+
+                <div class="product-info">
+
+                    <span class="product-category">
+                        Chicken
+                    </span>
+
+                    <h3>Fresh Whole Chicken</h3>
+
+                    <p class="price">
+                        R130.00
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="product-card">
+
+                <div class="product-image">
+                    <img src="images/Mixed portion chicken.jpg" alt="Mixed Portion Chicken">
+                </div>
+
+                <div class="product-info">
+
+                    <span class="product-category">
+                        Chicken
+                    </span>
+
+                    <h3>Chicken Mixed Portions</h3>
+
+                    <p class="price">
+                        R94.99
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="product-card">
+
+                <div class="product-image">
+                    <img src="images/Chicken interstines.jpg" alt="Chicken Drumsticks">
+                </div>
+
+                <div class="product-info">
+
+                    <span class="product-category">
+                        Chicken
+                    </span>
+
+                    <h3>Fresh Chicken Interstines</h3>
+
+                    <p class="price">
+                        R65.00
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ABOUT -->
+
+    <section class="about" id="about">
+
+        <div class="about-content">
+
+            <div class="about-text">
+
+                <p class="section-label">
+                    ABOUT AGRISUDECO
+                </p>
+
+                <h2>
+                    Quality Poultry From Our Family To Yours.
+                </h2>
+
+                <p>
+                    Agrisudeco Poultry is committed to providing
+                    quality poultry products to our customers.
+                    We aim to make ordering poultry products
+                    simple, convenient and reliable.
+                </p>
+
+                <a href="#contact" class="primary-btn">
+                    Contact Us
+                </a>
+
+            </div>
+
+
+            <div class="about-image">
+                <img src="images/home-page-chicken.jpeg" alt="Agrisudeco Poultry Farm">
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!--  WHY CHOOSE US -->
+
+    <section class="why-us">
+
+        <div class="section-heading">
+
+            <p>WHY AGRISUDECO?</p>
+
+            <h2>Why Choose Us?</h2>
+
+        </div>
+
+
+        <div class="features">
+
+            <div class="feature">
+
+                <span>✓</span>
+
+                <h3>Quality Products</h3>
+
+                <p>
+                    We focus on providing quality poultry products.
+                </p>
+
+            </div>
+
+
+            <div class="feature">
+
+                <span>💰</span>
+
+                <h3>Great Prices</h3>
+
+                <p>
+                    Competitive prices for everyday customers.
+                </p>
+
+            </div>
+
+
+            <div class="feature">
+                <span>📦</span>
+                <h3>Easy Ordering</h3>
+                <p>
+                    Browse products and place your order easily.
+                </p>
+            </div>
+            <div class="feature">
+                <span>🤝</span>
+                <h3>Reliable Service</h3>
+                <p>
+                    Customer satisfaction is important to us.
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+    <!--  CONTACT  -->
+    <section class="contact" id="contact">
+        <div class="contact-content">
+            <p class="section-label">
+                GET IN TOUCH
+            </p>
+            <h2>
+                Ready To Place An Order?
+            </h2>
+            <p>
+                Browse our products or contact Agrisudeco Poultry
+                for more information.
+            </p>
+            <a href="products.html" class="primary-btn">
+                Start Shopping
+            </a>
+        </div>
+    </section>
+
+
+    <!--  FOOTER  -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h2>🐔 Agrisudeco Poultry</h2>
+                <p>
+                    Quality poultry products you can trust.
+                </p>
+            </div>
+
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <a href="index.html">Home</a>
+                <a href="products.html">Shop</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="footer-contact">
+                <h3>Contact</h3>
+                <p>📱 WhatsApp</p>
+                <p>📘 Facebook</p>
+                <p>🎵 TikTok</p>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <p>
+                © 2026 Agrisudeco Poultry (Pty) Ltd. All Rights Reserved.
+            </p>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

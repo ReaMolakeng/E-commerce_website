@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products | Agrisudeco Poultry</title>
+    <link rel="icon" href="../images/agrisudeco-logo.jpg">
+    <link rel="stylesheet" href="css/admin-style.css">
+</head>
+
+<body class="admin-page">
+
+    <!-- SIDEBAR -->
+
+    <aside class="admin-sidebar" id="admin-sidebar">
+
+        <div class="admin-sidebar-logo">
+
+            <img
+                src="../images/agrisudeco-logo.jpg"
+                alt="Agrisudeco Poultry Logo"
+            >
+
+            <h2>Agrisudeco</h2>
+
+            <span>Administration</span>
+
+        </div>
+
+
+        <nav class="admin-nav">
+
+            <a href="dashboard.html" class="admin-nav-link">
+                <span>📊</span>
+                Dashboard
+            </a>
+
+            <a href="products.html" class="admin-nav-link active">
+                <span>📦</span>
+                Products
+            </a>
+
+            <a href="orders.html" class="admin-nav-link">
+                <span>🛒</span>
+                Orders
+            </a>
+
+            <a href="customers.html" class="admin-nav-link">
+                <span>👥</span>
+                Customers
+            </a>
+
+        </nav>
+
+
+        <div class="admin-sidebar-bottom">
+
+            <a href="../index.html" class="admin-nav-link">
+                <span>🌐</span>
+                View Store
+            </a>
+
+            <button class="admin-logout" id="admin-logout">
+                <span>🚪</span>
+                Logout
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN CONTENT -->
+
+    <main class="admin-main">
+
+        <!-- TOP BAR -->
+
+        <header class="admin-topbar">
+
+            <button
+                class="admin-menu-toggle"
+                id="admin-menu-toggle">
+                ☰
+            </button>
+
+
+            <div class="admin-page-title">
+
+                <h1>Products</h1>
+
+                <p>
+                    Manage the products available in your online store.
+                </p>
+
+            </div>
+
+
+            <div class="admin-user">
+
+                <div class="admin-user-icon">
+                    👤
+                </div>
+
+                <div>
+                    <strong>Administrator</strong>
+                    <span>Admin</span>
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- PRODUCTS CONTENT -->
+        <section class="admin-content">
+
+            <!-- PRODUCT HEADER -->
+
+            <div class="products-page-header">
+
+                <div>
+
+                    <h2>All Products</h2>
+
+                    <p>
+                        Add, edit and manage Agrisudeco Poultry products.
+                    </p>
+
+                </div>
+
+                <button
+                    class="add-product-btn"
+                    id="add-product-btn">
+
+                    + Add Product
+
+                </button>
+
+            </div>
+
+            <!-- SEARCH AND FILTER -->
+            <div class="product-tools">
+
+                <div class="product-search">
+
+                    <input
+                        type="text"
+                        id="product-search"
+                        placeholder="Search products..."
+                    >
+
+                </div>
+
+                <div class="product-filter">
+
+                    <select id="category-filter">
+
+                        <option value="all">
+                            All Categories
+                        </option>
+
+                        <option value="Chicken">
+                            Chicken
+                        </option>
+
+                        <option value="Eggs">
+                            Eggs
+                        </option>
+
+                        <option value="Bulk">
+                            Bulk Orders
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUCTS TABLE -->
+
+            <div class="admin-section products-table-section">
+
+                <div class="admin-table-container">
+
+                    <table class="admin-table products-table">
+                        <thead>
+                            <tr>
+                                <th>Image</th>
+                                <th>Product</th>
+                                <th>Category</th>
+                                <th>Price</th>
+                                <th>Stock</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="admin-products-list">
+
+                            <!-- Products will be inserted by JavaScript -->
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/admin.js"></script>
+
+</body>
+
+</html>

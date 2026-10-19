@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orders | Agrisudeco Poultry</title>
+    <link rel="stylesheet" href="css/admin-style.css">
+</head>
+
+<body>
+
+
+    <!-- =========================
+         ADMIN SIDEBAR
+    ========================== -->
+    <aside
+        class="admin-sidebar"
+        id="admin-sidebar"
+    >
+
+        <div class="admin-sidebar-header">
+            <img src="../images/agrisudeco-logo.jpg" alt="Agrisudeco Poultry Logo">
+            <h2>Agrisudeco</h2>
+        </div>
+
+        <nav class="admin-nav">
+
+            <a
+                href="dashboard.html"
+                class="admin-nav-link"
+            >
+                <span>📊</span>
+                Dashboard
+            </a>
+
+
+            <a
+                href="products.html"
+                class="admin-nav-link"
+            >
+                <span>📦</span>
+                Products
+            </a>
+
+
+            <a
+                href="orders.html"
+                class="admin-nav-link active"
+            >
+                <span>🛒</span>
+                Orders
+            </a>
+
+
+            <a
+                href="customers.html"
+                class="admin-nav-link"
+            >
+                <span>👥</span>
+                Customers
+            </a>
+
+
+            <a
+                href="../index.html"
+                class="admin-nav-link"
+            >
+                <span>🏪</span>
+                View Store
+            </a>
+
+
+            <a
+                href="#"
+                class="admin-nav-link"
+                id="admin-logout"
+            >
+                <span>🚪</span>
+                Logout
+            </a>
+
+        </nav>
+
+    </aside>
+
+
+
+    <!-- =========================
+         MAIN CONTENT
+    ========================== -->
+
+    <main class="admin-main">
+
+
+        <!-- TOP BAR -->
+
+        <header class="admin-topbar">
+
+            <button
+                class="admin-menu-toggle"
+                id="admin-menu-toggle"
+            >
+                ☰
+            </button>
+
+
+            <div>
+
+                <h1>Orders</h1>
+
+                <p>
+                    Manage customer orders
+                </p>
+
+            </div>
+
+
+            <div class="admin-user">
+
+                <span>
+                    Administrator
+                </span>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- =========================
+             PAGE CONTENT
+        ========================== -->
+
+        <section class="admin-content">
+
+
+            <!-- PAGE HEADER -->
+
+            <div class="products-page-header">
+
+                <div>
+
+                    <h2>
+                        Customer Orders
+                    </h2>
+
+                    <p>
+                        View and manage orders placed by customers.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =========================
+                 ORDER TOOLS
+            ========================== -->
+
+            <div class="product-tools">
+
+
+                <!-- SEARCH -->
+
+                <input
+                    type="text"
+                    id="order-search"
+                    class="product-search"
+                    placeholder="Search orders..."
+                >
+
+
+                <!-- STATUS FILTER -->
+
+                <select
+                    id="order-status-filter"
+                    class="product-filter"
+                >
+
+                    <option value="all">
+                        All Orders
+                    </option>
+
+                    <option value="Pending">
+                        Pending
+                    </option>
+
+                    <option value="Processing">
+                        Processing
+                    </option>
+
+                    <option value="Completed">
+                        Completed
+                    </option>
+
+                    <option value="Cancelled">
+                        Cancelled
+                    </option>
+
+                </select>
+
+            </div>
+
+
+
+            <!-- =========================
+                 ORDERS TABLE
+            ========================== -->
+
+            <div class="products-table-container">
+
+                <table class="products-table">
+
+                    <thead>
+
+                        <tr>
+
+                            <th>
+                                Order ID
+                            </th>
+
+                            <th>
+                                Customer
+                            </th>
+
+                            <th>
+                                Date
+                            </th>
+
+                            <th>
+                                Items
+                            </th>
+
+                            <th>
+                                Total
+                            </th>
+
+                            <th>
+                                Status
+                            </th>
+
+                            <th>
+                                Actions
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody id="orders-table-body">
+
+                        <!-- Orders will be added using JavaScript -->
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+<!-- ORDER STATUS MODAL -->
+
+<div class="order-modal" id="order-modal">
+
+    <div class="order-modal-content">
+
+        <div class="order-modal-header">
+
+            <div>
+                <h2>Manage Order</h2>
+                <p id="modal-order-id"></p>
+            </div>
+
+            <button
+                type="button"
+                class="order-modal-close"
+                id="order-modal-close"
+            >
+                &times;
+            </button>
+
+        </div>
+
+
+        <div class="order-modal-body">
+
+            <div class="order-detail-row">
+
+                <strong>Customer:</strong>
+
+                <span id="modal-customer"></span>
+
+            </div>
+
+
+            <div class="order-detail-row">
+
+                <strong>Order Date:</strong>
+
+                <span id="modal-date"></span>
+
+            </div>
+
+
+            <div class="order-detail-row">
+
+                <strong>Items:</strong>
+
+                <span id="modal-items"></span>
+
+            </div>
+
+
+            <div class="order-detail-row">
+
+                <strong>Total:</strong>
+
+                <span id="modal-total"></span>
+
+            </div>
+
+
+            <div class="admin-form-group">
+
+                <label for="modal-status">
+                    Order Status
+                </label>
+
+                <select id="modal-status">
+
+                    <option value="Pending">
+                        Pending
+                    </option>
+
+                    <option value="Processing">
+                        Processing
+                    </option>
+
+                    <option value="Completed">
+                        Completed
+                    </option>
+
+                    <option value="Cancelled">
+                        Cancelled
+                    </option>
+
+                </select>
+
+            </div>
+
+        </div>
+
+
+        <div class="order-modal-actions">
+
+            <button
+                type="button"
+                class="cancel-product-btn"
+                id="cancel-order-update"
+            >
+                Cancel
+            </button>
+
+            <button
+                type="button"
+                class="save-product-btn"
+                id="save-order-status"
+            >
+                Update Status
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+    <!-- ADMIN JAVASCRIPT -->
+    <script src="js/admin.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Add Product | Agrisudeco Poultry</title>
+
+    <link rel="stylesheet" href="css/admin-style.css">
+</head>
+
+<body class="admin-page">
+
+    <!-- SIDEBAR -->
+    <aside class="admin-sidebar" id="admin-sidebar">
+        <div class="admin-sidebar-logo">
+            <img
+                src="../images/agrisudeco-logo.png"
+                alt="Agrisudeco Poultry Logo"
+            >
+            <h2>Agrisudeco</h2>
+            <span>Administration</span>
+        </div>
+
+        <nav class="admin-nav">
+
+            <a href="dashboard.html" class="admin-nav-link">
+                <span>📊</span>
+                Dashboard
+            </a>
+
+            <a href="products.html" class="admin-nav-link active">
+                <span>📦</span>
+                Products
+            </a>
+
+            <a href="orders.html" class="admin-nav-link">
+                <span>🛒</span>
+                Orders
+            </a>
+
+            <a href="customers.html" class="admin-nav-link">
+                <span>👥</span>
+                Customers
+            </a>
+
+        </nav>
+
+
+        <div class="admin-sidebar-bottom">
+
+            <a href="../index.html" class="admin-nav-link">
+                <span>🌐</span>
+                View Store
+            </a>
+
+            <button class="admin-logout" id="admin-logout">
+                <span>🚪</span>
+                Logout
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN CONTENT -->
+
+    <main class="admin-main">
+
+        <!-- TOP BAR -->
+
+        <header class="admin-topbar">
+
+            <button
+                class="admin-menu-toggle"
+                id="admin-menu-toggle">
+                ☰
+            </button>
+
+
+            <div class="admin-page-title">
+
+                <h1>Add Product</h1>
+
+                <p>
+                    Add a new product to the Agrisudeco Poultry store.
+                </p>
+
+            </div>
+
+
+            <div class="admin-user">
+
+                <div class="admin-user-icon">
+                    👤
+                </div>
+
+                <div>
+                    <strong>Administrator</strong>
+                    <span>Admin</span>
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- ADD PRODUCT CONTENT -->
+
+        <section class="admin-content">
+
+            <div class="admin-form-section">
+
+                <div class="form-section-header">
+
+                    <h2>Product Information</h2>
+
+                    <p>
+                        Enter the details of the new product.
+                    </p>
+
+                </div>
+
+
+                <form id="add-product-form">
+
+
+                    <!-- PRODUCT NAME -->
+
+                    <div class="admin-form-group">
+
+                        <label for="product-name">
+                            Product Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="product-name"
+                            placeholder="e.g. Fresh Whole Chicken"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- CATEGORY -->
+
+                    <div class="admin-form-row">
+
+                        <div class="admin-form-group">
+
+                            <label for="product-category">
+                                Category
+                            </label>
+
+                            <select
+                                id="product-category"
+                                required
+                            >
+
+                                <option value="">
+                                    Select Category
+                                </option>
+
+                                <option value="Chicken">
+                                    Chicken
+                                </option>
+
+                                <option value="Eggs">
+                                    Eggs
+                                </option>
+
+                                <option value="Bulk">
+                                    Bulk Orders
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <!-- PRICE -->
+
+                        <div class="admin-form-group">
+
+                            <label for="product-price">
+                                Price (R)
+                            </label>
+
+                            <input
+                                type="number"
+                                id="product-price"
+                                placeholder="e.g. 85.00"
+                                min="0"
+                                step="0.01"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- STOCK -->
+
+                    <div class="admin-form-group">
+
+                        <label for="product-stock">
+                            Stock Quantity
+                        </label>
+
+                        <input
+                            type="number"
+                            id="product-stock"
+                            placeholder="e.g. 20"
+                            min="0"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- DESCRIPTION -->
+
+                    <div class="admin-form-group">
+
+                        <label for="product-description">
+                            Product Description
+                        </label>
+
+                        <textarea
+                            id="product-description"
+                            rows="5"
+                            placeholder="Enter a description of the product..."
+                            required
+                        ></textarea>
+
+                    </div>
+
+
+                    <!-- IMAGE -->
+
+                    <div class="admin-form-group">
+
+                        <label for="product-image">
+                            Product Image
+                        </label>
+
+                        <input
+                            type="file"
+                            id="product-image"
+                            accept="image/*"
+                        >
+                        <small>
+                            Select an image for the product.
+                        </small>
+
+                    </div>
+
+                    <!-- IMAGE PREVIEW -->
+                    <div
+                        class="product-image-preview"
+                        id="product-image-preview"
+                    >
+                        <span>
+                            Image Preview
+                        </span>
+                    </div>
+
+                    <!-- BUTTONS -->
+                    <div class="admin-form-actions">
+
+                        <a
+                            href="products.html"
+                            class="cancel-product-btn"
+                        >
+                            Cancel
+                        </a>
+
+
+                        <button
+                            type="submit"
+                            class="save-product-btn"
+                        >
+                            Save Product
+                        </button>
+
+                    </div>
+
+                </form>
+
+            </div>
+        </section>
+    </main>
+
+    <script src="js/admin.js"></script>
+
+</body>
+
+</html>

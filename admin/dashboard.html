@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | Agrisudeco Poultry</title>
+    <link rel="icon" href="../images/agrisudeco-logo.jpg">
+    <link rel="stylesheet" href="css/admin-style.css">
+</head>
+
+<body class="admin-page">
+    <!-- ========================= -->
+    <!-- SIDEBAR -->
+    <!-- ========================= -->
+    <aside class="admin-sidebar" id="admin-sidebar">
+
+        <div class="admin-sidebar-logo">
+
+            <img
+                src="../images/agrisudeco-logo.jpg"
+                alt="Agrisudeco Poultry Logo"
+            >
+
+            <h2>Agrisudeco</h2>
+
+            <span>Administration</span>
+
+        </div>
+
+
+        <nav class="admin-nav">
+
+            <a href="dashboard.html" class="admin-nav-link active">
+                <span>📊</span>
+                Dashboard
+            </a>
+
+            <a href="products.html" class="admin-nav-link">
+                <span>📦</span>
+                Products
+            </a>
+
+            <a href="orders.html" class="admin-nav-link">
+                <span>🛒</span>
+                Orders
+            </a>
+
+            <a href="customers.html" class="admin-nav-link">
+                <span>👥</span>
+                Customers
+            </a>
+
+        </nav>
+
+
+        <div class="admin-sidebar-bottom">
+
+            <a href="../index.html" class="admin-nav-link">
+                <span>🌐</span>
+                View Store
+            </a>
+
+            <button class="admin-logout" id="admin-logout">
+                <span>🚪</span>
+                Logout
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <!-- ========================= -->
+    <!-- MAIN CONTENT -->
+    <!-- ========================= -->
+
+    <main class="admin-main">
+
+        <!-- TOP BAR -->
+
+        <header class="admin-topbar">
+
+            <button
+                class="admin-menu-toggle"
+                id="admin-menu-toggle">
+                ☰
+            </button>
+
+
+            <div class="admin-page-title">
+
+                <h1>Dashboard</h1>
+
+                <p>
+                    Welcome to the Agrisudeco Poultry administration portal.
+                </p>
+
+            </div>
+
+
+            <div class="admin-user">
+
+                <div class="admin-user-icon">
+                    👤
+                </div>
+
+                <div>
+                    <strong>Administrator</strong>
+                    <span>Admin</span>
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- DASHBOARD CONTENT -->
+
+        <section class="admin-content">
+
+            <!-- STATISTICS -->
+            <div class="admin-stats">
+
+                <div class="admin-stat-card dashboard-link-card" onclick="window.location.href='products.html'">
+                    <h3>Total Products</h3>
+                    <p>12</p>
+                    <span>View Products →</span>
+                </div>
+
+                <div class="admin-stat-card dashboard-link-card" onclick="window.location.href='orders.html'">
+                    <h3>Total Orders</h3>
+                    <p>25</p>
+                    <span>Manage Orders →</span>
+                </div>
+
+                <div class="admin-stat-card dashboard-link-card" onclick="window.location.href='customers.html'">
+                    <h3>Customers</h3>
+                    <p>48</p>
+                    <span>View Customers →</span>
+                </div>
+
+                <div class="admin-stat-card">
+                    <h3>Total Sales</h3>
+                    <p>R8,450</p>
+                    <span>Current Sales</span>
+                </div>
+
+            </div>
+
+
+            <!-- QUICK ACTIONS -->
+            <div class="admin-section">
+
+                <div class="section-header">
+
+                    <div>
+                        <h2>Quick Actions</h2>
+
+                        <p>
+                            Manage your online store.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="quick-actions">
+
+                    <a href="products.html" class="quick-action-card">
+
+                        <span class="quick-action-icon">
+                            📦
+                        </span>
+
+                        <div>
+                            <h3>Manage Products</h3>
+
+                            <p>
+                                Add, edit or remove products.
+                            </p>
+                        </div>
+
+                    </a>
+
+
+                    <a href="orders.html" class="quick-action-card">
+                        <span class="quick-action-icon">
+                            🛒
+                        </span>
+
+                        <div>
+                            <h3>Manage Orders</h3>
+
+                            <p>
+                                View and update customer orders.
+                            </p>
+                        </div>
+                    </a>
+
+
+                    <a href="customers.html" class="quick-action-card">
+                        <span class="quick-action-icon">
+                            👥
+                        </span>
+
+                        <div>
+                            <h3>Customers</h3>
+                            <p>
+                                View registered customers.
+                            </p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- RECENT ORDERS -->
+            <div class="admin-section">
+
+                <div class="section-header">
+
+                    <div>
+
+                        <h2>Recent Orders</h2>
+
+                        <p>
+                            Latest customer orders.
+                        </p>
+
+                    </div>
+
+                    <a href="orders.html" class="view-all">
+                        View All
+                    </a>
+
+                </div>
+
+
+                <div class="admin-table-container">
+
+                    <table class="admin-table">
+
+                        <thead>
+
+                            <tr>
+
+                                <th>Order ID</th>
+
+                                <th>Customer</th>
+
+                                <th>Date</th>
+
+                                <th>Total</th>
+
+                                <th>Status</th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody>
+
+                            <tr>
+
+                                <td>#ORD001</td>
+
+                                <td>John Smith</td>
+
+                                <td>26 Sep 2026</td>
+
+                                <td>R250.00</td>
+
+                                <td>
+                                    <span class="status pending">
+                                        Pending
+                                    </span>
+                                </td>
+
+                            </tr>
+
+
+                            <tr>
+
+                                <td>#ORD002</td>
+
+                                <td>Thabo Mokoena</td>
+
+                                <td>26 Sep 2026</td>
+
+                                <td>R180.00</td>
+
+                                <td>
+                                    <span class="status processing">
+                                        Processing
+                                    </span>
+                                </td>
+
+                            </tr>
+
+
+                            <tr>
+
+                                <td>#ORD003</td>
+
+                                <td>Sarah Dlamini</td>
+
+                                <td>25 Sep 2026</td>
+
+                                <td>R320.00</td>
+
+                                <td>
+                                    <span class="status delivered">
+                                        Delivered
+                                    </span>
+                                </td>
+
+                            </tr>
+
+
+                            <tr>
+
+                                <td>#ORD004</td>
+
+                                <td>Michael Nkosi</td>
+
+                                <td>25 Sep 2026</td>
+
+                                <td>R450.00</td>
+
+                                <td>
+                                    <span class="status cancelled">
+                                        Cancelled
+                                    </span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/admin.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart | Agrisudeco Poultry</title>
+    <link rel="icon" href="images/agrisudeco-logo.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+ <header class="navbar">
+
+    <div class="logo">
+        <img src="images/agrisudeco-logo.jpg" alt="Agrisudeco Poultry Logo">
+        <h2>Agrisudeco Poultry</h2>
+    </div>
+
+    <nav id="main-nav">
+        <a href="index.html">Home</a>
+        <a href="products.html">Shop</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#contact">Contact</a>
+
+        <!-- Logout ONLY inside hamburger -->
+        <div class="mobile-logout" id="mobile-logout"></div>
+    </nav>
+
+    <div class="nav-actions">
+
+        <!-- Cart stays outside hamburger -->
+        <a href="cart.html" class="cart-btn">
+            🛒 <span id="cart-count">0</span>
+        </a>
+
+        <!-- Profile/account stays outside hamburger -->
+        <div class="account-area" id="account-area"></div>
+
+    </div>
+
+    <button class="menu-toggle" id="menu-toggle">☰</button>
+
+</header>
+
+    <!-- CART HEADER -->
+    <section class="cart-header">
+        <h1>Your Shopping Cart</h1>
+        <p>
+            Review your items before checking out.
+        </p>
+    </section>
+
+    <!-- CART -->
+    <main class="cart-page">
+        <div class="cart-container">
+
+            <!-- CART ITEMS -->
+            <section class="cart-items-section">
+                <h2>
+                    Your Items
+                </h2>
+                <div id="cart-items">
+
+                    <!-- Cart items will be added by JavaScript -->
+                </div>
+                <div id="empty-cart" class="empty-cart">
+                    <div class="empty-cart-icon">
+                        🛒
+                    </div>
+                    <h3>
+                        Your cart is empty
+                    </h3>
+                    <p>
+                        You haven't added any products yet.
+                    </p>
+                    <a href="products.html" class="continue-shopping">
+                        Continue Shopping
+                    </a>
+                </div>
+            </section>
+
+            <!-- CART SUMMARY -->
+            <aside class="cart-summary">
+                <h2>
+                    Order Summary
+                </h2>
+
+                <div class="summary-row">
+                    <span>
+                        Subtotal
+                    </span>
+                    <span id="cart-subtotal">
+                        R0.00
+                    </span>
+                </div>
+
+                <div class="summary-row">
+                    <span>
+                        Delivery
+                    </span>
+                    <span id="cart-delivery">
+                        R0.00
+                    </span>
+                </div>
+
+                <div class="summary-divider"></div>
+
+                <div class="summary-total">
+                    <span>
+                        Total
+                    </span>
+                    <span id="cart-total">
+                        R0.00
+                    </span>
+                </div>
+
+                <button id="checkout-btn"
+                        class="checkout-btn">
+                    Proceed to Checkout
+                </button>
+
+                <a href="products.html"
+                   class="continue-shopping-summary">
+                    Continue Shopping
+                </a>
+            </aside>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        <div class="footer-content">
+            <div>
+                <h3>
+                    Agrisudeco Poultry
+                </h3>
+                <p>
+                    Quality poultry products for every household.
+                </p>
+            </div>
+
+            <div>
+                <h4>
+                    Quick Links
+                </h4>
+                <a href="index.html">
+                    Home
+                </a>
+                <a href="products.html">
+                    Shop
+                </a>
+                <a href="cart.html">
+                    Cart
+                </a>
+            </div>
+
+            <div>
+                <h4>
+                    Contact
+                </h4>
+                <p>
+                    WhatsApp: Contact Us
+                </p>
+                <p>
+                    Facebook: Agrisudeco Poultry
+                </p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>
+                © 2026 Agrisudeco Poultry (Pty) Ltd.
+                All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/products.js"></script>
+    <script src="js/cart.js"></script>
+</body>
+
+</html>

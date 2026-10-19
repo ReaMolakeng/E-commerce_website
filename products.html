@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop | Agrisudeco Poultry</title>
+    <link rel="icon" href="images/agrisudeco-logo.jpg" type="image/x-icon">   
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="images/agrisudeco-logo.jpg" type="image/x-icon">
+
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+<header class="navbar">
+
+    <div class="logo">
+        <img src="images/agrisudeco-logo.jpg" alt="Agrisudeco Poultry Logo">
+        <h2>Agrisudeco Poultry</h2>
+    </div>
+
+    <nav id="main-nav">
+        <a href="index.html">Home</a>
+        <a href="products.html">Shop</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#contact">Contact</a>
+
+        <!-- Logout ONLY inside hamburger -->
+        <div class="mobile-logout" id="mobile-logout"></div>
+    </nav>
+
+    <div class="nav-actions">
+
+        <!-- Cart stays outside hamburger -->
+        <a href="cart.html" class="cart-btn">
+            🛒 <span id="cart-count">0</span>
+        </a>
+
+        <!-- Profile/account stays outside hamburger -->
+        <div class="account-area" id="account-area"></div>
+
+    </div>
+
+    <button class="menu-toggle" id="menu-toggle">☰</button>
+
+</header>
+
+
+    <!-- SHOP HEADER -->
+    <section class="shop-header">
+        <div>
+            <p class="section-label">
+                AGRISUDECO POULTRY
+            </p>
+            <h1>
+                Our Products
+            </h1>
+            <p>
+                Browse our range of quality poultry products.
+            </p>
+        </div>
+    </section>
+
+    <!-- SHOP -->
+    <main class="shop-page">
+
+        <!-- SEARCH + FILTER -->
+        <div class="shop-controls">
+            <div class="search-box">
+                <input
+                    type="text"
+                    id="product-search"
+                    placeholder="Search products..."
+                >
+                <button id="search-product-btn">
+                    🔍
+                </button>
+            </div>
+
+            <div class="category-filter">
+                <button
+                    class="filter-btn active"
+                    data-category="All">
+                    All
+                </button>
+                <button
+                    class="filter-btn"
+                    data-category="Chicken">
+                    Chicken
+                </button>
+                <button
+                    class="filter-btn"
+                    data-category="Eggs">
+                    Eggs
+                </button>
+                <button
+                    class="filter-btn"
+                    data-category="Bulk">
+                    Bulk Orders
+                </button>
+            </div>
+        </div>
+
+        <!-- PRODUCTS -->
+        <section class="shop-products">
+            <div
+                class="shop-product-container"
+                id="product-container">
+                <!-- JavaScript products will appear here -->
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h2>
+                    🐔 Agrisudeco Poultry
+                </h2>
+                <p>
+                    Quality poultry products you can trust.
+                </p>
+            </div>
+
+            <div class="footer-links">
+                <h3>
+                    Quick Links
+                </h3>
+                <a href="index.html">
+                    Home
+                </a>
+                <a href="products.html">
+                    Shop
+                </a>
+                <a href="index.html#about">
+                    About
+                </a>
+                <a href="index.html#contact">
+                    Contact
+                </a>
+            </div>
+
+            <div class="footer-contact">
+                <h3>
+                    Contact
+                </h3>
+                <p>
+                    📱 WhatsApp
+                </p>
+                <p>
+                    📘 Facebook
+                </p>
+                <p>
+                    🎵 TikTok
+                </p>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <p>
+                © 2026 Agrisudeco Poultry (Pty) Ltd.
+                All Rights Reserved.
+            </p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/products.js"></script>
+
+</body>
+
+</html>
